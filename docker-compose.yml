@@ -7,7 +7,7 @@ services:
       context: .
     container_name: flask-backend
     ports:
-      - "5001:5001"
+      - "5002:5002"
     volumes:
       - ./backend/:/backend
     networks:
