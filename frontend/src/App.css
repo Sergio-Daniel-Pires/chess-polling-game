@@ -1,0 +1,33 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.player-info {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.sidebar {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.moves-list {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow-y: auto;
+  height: auto;
+  max-height: 200px;
+  min-height: 100px;
+}
+
+.move-pill {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.text-justify {
+  text-align: justify;
+}

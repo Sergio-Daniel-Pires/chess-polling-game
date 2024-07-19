@@ -1,0 +1,36 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        script: |
+          # Update repository
+          cd chess-polling-game
+          git pull
+
+          # Update backend env vars
+          echo "RECAPTCHA_PUBLIC_KEY=${{ secrets.RECAPTCHA_PUBLIC_KEY }}" > backend/app/.env
+          echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> backend/app/.env
+          echo "REDIS_CONN=${{ secrets.REDIS_CONN }}" >> backend/app/.env
+          echo "MONGO_CONN=${{ secrets.MONGO_CONN }}" >> backend/app/.env
+
+          # Update frontend env vars
+          echo "REACT_APP_RECAPTCHA_SITE_KEY=${{ secrets.RECAPTCHA_PUBLIC_KEY }}" > frontend/.env
+          echo "REACT_APP_URI_BACKEND=chess-ai.regios.com.br" >> frontend/.env
+
+          # Rebuild docker compose
+          docker compose down
+          docker compose build
+          docker compose up -d

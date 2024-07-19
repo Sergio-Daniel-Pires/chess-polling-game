@@ -1,0 +1,45 @@
+{
+    "welcomeModal": {
+        "title": "Welcome to Chess AI!",
+        "body1": "An AI can defeat any human in chess, but can an AI defeat <strong>ALL</strong> humans together?",
+        "body2": "Welcome to the 'Chess AI!' experiment, combining the chess community, voting, and AI!",
+        "body3": "Make strategies, discuss in groups, choose the best move and vote to try to beat <1>Stockfish</1> at its highest level.",
+        "button": "Let's Play!"
+    },
+    "voteAlert": {
+        "voteRegistered": "Vote successfully registered!"
+    },
+    "alertsErrors": {
+        "emptyRecaptcha": "Please, complete the reCAPTCHA first.",
+        "emptyMove": "Please, make a move first."
+    },
+    "chessAI": "Chess AI",
+    "movesList": "Moves List",
+    "mostVotedMoves": "Most Voted Moves",
+    "gameFinished": "Game is Finished!",
+    "winner": "Winner: {{winner}}",
+    "totalMoves": "Total Moves: {{moveCount}}",
+    "waitingNextGame": "Waiting for the next game...",
+    "sendVote": "Send Vote",
+    "player": "The Whole World",
+    "nav": {
+        "matches": "Matches",
+        "about": "About"
+    },
+    "close": "close",
+    "sourceCode": "Source Code",
+    "loading": "Loading",
+    "matchesModal": {
+        "title": "Finished Matches",
+        "moves": "Moves",
+        "winner": "Winner",
+        "viewMatch": "View Match"
+    },
+    "aboutModal": {
+        "title": "About 'Chess AI' experiment",
+        "description": "",
+        "kasparovVsDeepBlue": "In 1997, Garry Kasparov faced IBM's supercomputer Deep Blue, marking the first defeat of a world champion by a computer in standard conditions. Deep Blue won 3.5 to 2.5, sparking discussions on the future of AI in chess.",
+        "kasparovVsWorld": "In 1999, Garry Kasparov played against thousands of online participants in a match called 'Kasparov vs. The World.' The game lasted four months, with players voting on moves. Kasparov won, demonstrating his unmatched strategic skills.",
+        "findMeOn": "Source code and more about the developer:"
+    }
+}

@@ -1,0 +1,12 @@
+# .gitignore
+venv/
+__pycache__/
+*.pyc
+*.pyo
+instance/config.py
+
+build/
+**/*.egg-info/
+instance/
+
+**/*.env

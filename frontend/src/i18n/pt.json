@@ -1,0 +1,45 @@
+{
+    "welcomeModal": {
+        "title": "Bem-vindo ao Chess IA!",
+        "body1": "Uma IA consegue derrotar qualquer humano no xadrez, mas conseguiria uma IA derrotar <strong>TODOS</strong> os humanos juntos?",
+        "body2": "Bem-vindos ao experimento \"Chess AI!\", este é um experimento que combina a comunidade de xadrez, votação e IA!",
+        "body3": "Faça estratégias, discuta em grupos, escolha a melhor jogada e faça seu voto para tentar vencer o <1>Stockfish</1> em seu maior nível.",
+        "button": "Vamos Jogar!"
+    },
+    "voteAlert": {
+        "voteRegistered": "Voto registrado com sucesso!"
+    },
+    "alertsErrors": {
+        "emptyRecaptcha": "Por favor, complete o reCAPTCHA primeiro.",
+        "emptyMove": "Por favor, faça um movimento primeiro."
+    },
+    "chessAI": "Chess IA",
+    "movesList": "Lista de Movimentos",
+    "mostVotedMoves": "Movimentos Mais Votados",
+    "gameFinished": "Jogo Terminado!",
+    "winner": "Vencedor: {{winner}}",
+    "totalMoves": "Total de Movimentos: {{moveCount}}",
+    "waitingNextGame": "Esperando o próximo jogo...",
+    "sendVote": "Enviar Voto",
+    "player": "O Mundo",
+    "nav": {
+        "matches": "Partidas",
+        "about": "Sobre"
+    },
+    "close": "fechar",
+    "sourceCode": "Código Fonte",
+    "loading": "Carregando",
+    "matchesModal": {
+        "title": "Jogos finalizados",
+        "moves": "Movimentos",
+        "winner": "Vencedor",
+        "viewMatch": "Ver jogo"
+    },
+    "aboutModal": {
+        "title": "Sobre o experimento 'Chess AI'",
+        "description": "Fullstack developer, apaixonado por tecnologia e IA",
+        "kasparovVsDeepBlue": "Em 1997, Garry Kasparov enfrentou o supercomputador Deep Blue da IBM, marcando a primeira derrota de um campeão mundial por um computador em condições normais. O Deep Blue venceu por 3,5 a 2,5, provocando discussões sobre o futuro da IA no xadrez.",
+        "kasparovVsWorld": "Em 1999, Garry Kasparov jogou contra milhares de participantes online em uma partida chamada 'Kasparov vs. O Mundo.' O jogo durou quatro meses, com os jogadores votando nos movimentos. Kasparov venceu, demonstrando suas habilidades estratégicas incomparáveis.",
+        "findMeOn": "Código fonte e mais sobre o desenvolvedor:"
+    }
+}

@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis
+    container_name: chess-redis
+    networks:
+      - network
+
+  backend:
+    build:
+      dockerfile: backend/backend.Dockerfile
+      context: .
+    container_name: flask-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend/:/backend
+    networks:
+      - network
+    environment:
+      FLASK_ENV: development
+    command: ["gunicorn", "-c", "gunicorn_config.py", "app:create_app()"]
+
+  frontend:
+    build:
+      dockerfile: frontend.Dockerfile
+      context: ./frontend
+    container_name: react-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    networks:
+      - network
+    environment:
+      NODE_ENV: development
+    command: ["npm", "run", "build"]
+
+networks:
+  network:

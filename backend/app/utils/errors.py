@@ -1,0 +1,2 @@
+class RecaptchaError(Exception):
+    pass

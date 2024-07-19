@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.Body {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.ButtonsBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.RightBar {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  justify-content: space-between;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px transparent solid;
+  overflow: hidden;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.User {
+  display: flex;
+  flex-direction: row;
+}
+
+.AlignLeft {
+  display: flex;
+  align-self: flex-start;
+}
+
+.AlignRight {
+  align-self: flex-end;
+}
+
+.AlignCenter {
+  align-self: center;
+}
+
+.Games,
+.Polling,
+.Captcha {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Votes {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.Vote {
+  display: flex;
+  width: 100px;
+  margin: 0 3px;
+  border-top: black 2px solid;
+  border-right: black 2px solid;
+  border-left: black 2px solid;
+  justify-content: center;
+}
+
+.Vote > p {
+  margin: 0;
+  padding: 5px;
+}
+
+.MakeMove {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
