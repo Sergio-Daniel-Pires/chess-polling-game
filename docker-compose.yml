@@ -1,12 +1,6 @@
 version: '3.8'
 
 services:
-  redis:
-    image: redis
-    container_name: chess-redis
-    networks:
-      - network
-
   backend:
     build:
       dockerfile: backend/backend.Dockerfile
