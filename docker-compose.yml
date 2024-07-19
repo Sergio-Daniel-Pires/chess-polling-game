@@ -13,7 +13,7 @@ services:
       context: .
     container_name: flask-backend
     ports:
-      - "5000:5000"
+      - "5001:5001"
     volumes:
       - ./backend/:/backend
     networks:
@@ -28,7 +28,7 @@ services:
       context: ./frontend
     container_name: react-frontend
     ports:
-      - "3000:3000"
+      - "3001:3001"
     volumes:
       - ./frontend:/app
     networks:
