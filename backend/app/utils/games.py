@@ -4,17 +4,17 @@ import random
 import time
 from abc import ABC, abstractmethod
 from typing import Any
-import pymongo
-import pymongo.database
-import pymongo.collection
 
 import chess
 import chess.engine
+import pymongo
+import pymongo.collection
+import pymongo.database
 import redis
-
 from app.services.game.models import ChessGame
 from app.services.game.structs import CreateChessGame
 from app.utils import config
+
 
 class GamesManager(ABC):
     shorter_update_time: int = 1
@@ -208,7 +208,8 @@ class LocalGameManager (GamesManager):
         self.chess_db = self.mongo_client["chess"]
         self.games_collection = self.chess_db["games"]
 
-        self.redis_client.delete(self.games_key)
+        # BUG return this when want to remove games :p
+        # self.redis_client.delete(self.games_key)
         if self.redis_client.get(self.games_key) is None:
             games = games or {}
             self.redis_client.set(self.games_key, json.dumps(games, default=str))
