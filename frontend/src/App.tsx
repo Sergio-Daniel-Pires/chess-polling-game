@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { useTranslation } from 'react-i18next';
 
-
 // @ts-ignore
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -24,6 +23,9 @@ import { useVoting } from './hooks/useVoting';
 import useChessGame from './hooks/useGame';
 import useRecaptcha from './hooks/useRecaptcha';
 import useSendVote from './hooks/useSendVote';
+
+import stockfishPlayerImg from './assets/stockfish-player.png';
+import worldPlayerImg from './assets/world-player.png';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -180,7 +182,7 @@ function App() {
           <PlayerInfo
             row="flex-row"
             name="Stockfish"
-            imgSrc="https://placehold.co/150x150"
+            imgSrc={stockfishPlayerImg}
           />
           <Row className="d-flex align-self-center my-3">
             <Col className="d-flex justify-content-center">
@@ -200,7 +202,7 @@ function App() {
           <PlayerInfo
             row="flex-row-reverse"
             name={t('player')}
-            imgSrc="https://placehold.co/150x150"
+            imgSrc={worldPlayerImg}
           />
         </Col>
         <Col md={4} className="text-center sidebar p-3 d-flex flex-column justify-content-around">
