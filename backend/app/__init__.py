@@ -27,7 +27,6 @@ cors = CORS()
 # Create chess games and start timer
 chess_games = LocalGameManager()
 scheduler = BackgroundScheduler()
-scheduler.start()
 
 SECONDS_IN_HOUR = 3600
 SECONDS_IN_DAY = SECONDS_IN_HOUR * 24
@@ -61,6 +60,8 @@ def create_app() -> Flask:
         chess_games.verify_games_to_update, "interval",
         seconds=chess_games.shorter_update_time
     )
+
+    scheduler.start()
 
     return app
 

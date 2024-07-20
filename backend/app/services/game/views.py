@@ -10,8 +10,6 @@ from .methods import verify_save_vote
 
 move_ns = Namespace("Move", description="Flask route to handle users moves")
 
-chess_games = LocalGameManager()
-
 @move_ns.route("/vote")
 class HandleMove(Resource):
     @move_ns.doc(expect=[ new_move_vote ])
@@ -30,18 +28,22 @@ class HandleMove(Resource):
 class GameBoard(Resource):
     @middleware
     def get(self):
+        chess_games = LocalGameManager()
         return { "games": chess_games.get_games() }
-    
+
 @move_ns.route("/finished-games")
 class GameBoard(Resource):
     @middleware
     def get(self):
+        chess_games = LocalGameManager()
         return { "games": chess_games.get_old_matches() }
 
 @move_ns.route("/status/game/<game>")
 class GameBoard(Resource):
     @middleware
     def get(self, game: str):
+        chess_games = LocalGameManager()
+
         return {
             "game": chess_games.get_game(game).__dict__,
             "voting": chess_games.get_top_n(game)
@@ -51,6 +53,8 @@ class GameBoard(Resource):
 class GameBoard(Resource):
     @middleware
     def get(self, game: str):
+        chess_games = LocalGameManager()
+
         return {
             "voting": chess_games.get_top_n(game)
         }
