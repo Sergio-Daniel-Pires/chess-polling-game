@@ -11,5 +11,5 @@ timeout = conf.GUNICORN_TIMEOUT
 
 loglevel = "info"
 
-accesslog = "/dev/null"
-errorlog = "/dev/null"
+# accesslog = "/dev/null"
+# errorlog = "/dev/null"

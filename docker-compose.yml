@@ -3,17 +3,15 @@ version: '3.8'
 services:
   backend:
     build:
-      dockerfile: backend/backend.Dockerfile
-      context: .
+      dockerfile: backend.Dockerfile
+      context: ./backend
+    volumes:
+      - ./backend/app:/app/app
     container_name: flask-backend
     ports:
       - "5002:5002"
-    volumes:
-      - ./backend/:/backend
     networks:
       - network
-    environment:
-      FLASK_ENV: development
     command: ["gunicorn", "-c", "gunicorn_config.py", "app:create_app()"]
 
   frontend:
@@ -23,12 +21,8 @@ services:
     container_name: react-frontend
     ports:
       - "3001:3001"
-    volumes:
-      - ./frontend:/app
     networks:
       - network
-    environment:
-      NODE_ENV: development
     command: ["npm", "run", "deploy"]
 
 networks:
