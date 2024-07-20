@@ -28,7 +28,7 @@ jobs:
 
           # Update frontend env vars
           echo "REACT_APP_RECAPTCHA_SITE_KEY=${{ secrets.RECAPTCHA_PUBLIC_KEY }}" > frontend/.env
-          echo "REACT_APP_URI_BACKEND=chess-ai.regios.com.br" >> frontend/.env
+          echo "REACT_APP_URI_BACKEND=chess-ai.regios.com.br:5000" >> frontend/.env
 
           # Rebuild docker compose
           docker compose down
