@@ -29,7 +29,7 @@ services:
       - network
     environment:
       NODE_ENV: development
-    command: ["npm", "run", "build"]
+    command: ["npm", "run", "deploy"]
 
 networks:
   network:
