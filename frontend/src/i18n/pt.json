@@ -2,8 +2,9 @@
     "welcomeModal": {
         "title": "Bem-vindo ao Chess IA!",
         "body1": "Uma IA consegue derrotar qualquer humano no xadrez, mas conseguiria uma IA derrotar <strong>TODOS</strong> os humanos juntos?",
-        "body2": "Bem-vindos ao experimento \"Chess AI!\", este é um experimento que combina a comunidade de xadrez, votação e IA!",
-        "body3": "Faça estratégias, discuta em grupos, escolha a melhor jogada e faça seu voto para tentar vencer o <1>Stockfish</1> em seu maior nível.",
+        "body2": "Bem-vindos ao experimento \"Chess AI!\", que combina a comunidade de xadrez, votação e IA!",
+        "body3": "Discuta em grupos para montar estratégias, escolha um movimento e faça seu voto para tentar vencer o <1>Stockfish</1> em seu maior nível.",
+        "body4": "Pode fazer quantos votos quiser, em quantos modos quiser e quando o temporizador acabar, o movimento com mais votos será o escolhido. Boa sorte!",
         "button": "Vamos Jogar!"
     },
     "voteAlert": {

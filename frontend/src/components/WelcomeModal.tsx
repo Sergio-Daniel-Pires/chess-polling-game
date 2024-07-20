@@ -23,13 +23,18 @@ const WelcomeModal: React.FC<WelcomeModalProps> = ({ show, onHide }) => {
                 </p>
                 <p>
                     <Trans i18nKey="welcomeModal.body2">
-                        Bem-vindos ao experimento "Chess AI!", este é um experimento que combina a comunidade de xadrez, votação e IA!
+                        Bem-vindos ao experimento "Chess AI!", que combina a comunidade de xadrez, votação e IA!
                     </Trans>
                 </p>
                 <p>
                     <Trans i18nKey="welcomeModal.body3">
-                        Faça estratégias, discuta em grupos, escolha a melhor jogada e faça seu voto para tentar vencer o
+                        Discuta em grupos para montar estratégias, escolha um movimento e faça seu voto para tentar vencer o
                         <a href="https://stockfishchess.org" target="_blank" rel="noopener noreferrer">Stockfish</a> em seu maior nível.
+                    </Trans>
+                </p>
+                <p>
+                    <Trans i18nKey="welcomeModal.body4">
+                        Pode fazer quantos votos quiser e em quantos modos quiser e quando o temporizador acabar, o movimento com mais votos será o escolhido. Boa sorte!
                     </Trans>
                 </p>
             </Modal.Body>

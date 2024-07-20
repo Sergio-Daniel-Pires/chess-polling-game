@@ -2,8 +2,9 @@
     "welcomeModal": {
         "title": "Welcome to Chess AI!",
         "body1": "An AI can defeat any human in chess, but can an AI defeat <strong>ALL</strong> humans together?",
-        "body2": "Welcome to the 'Chess AI!' experiment, combining the chess community, voting, and AI!",
-        "body3": "Make strategies, discuss in groups, choose the best move and vote to try to beat <1>Stockfish</1> at its highest level.",
+        "body2": "Welcome to the \"Chess AI!\" experiment, which combines the chess community, voting, and AI!",
+        "body3": "Discuss in groups to strategize, choose a move, and cast your vote to try and beat <1>Stockfish</1> at its highest level.",
+        "body4": "You can vote as many times as you want, in as many modes as you like and when the timer runs out, the move with the most votes will be chosen. Good luck!",
         "button": "Let's Play!"
     },
     "voteAlert": {
