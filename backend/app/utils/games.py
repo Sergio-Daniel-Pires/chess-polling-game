@@ -210,15 +210,15 @@ class LocalGameManager (GamesManager):
 
         # BUG return this when want to remove games :p
         # self.redis_client.delete(self.games_key)
-        if self.redis_client.get(self.games_key) is None:
-            games = games or {}
-            self.redis_client.set(self.games_key, json.dumps(games, default=str))
+        # if self.redis_client.get(self.games_key) is None:
+        #     games = games or {}
+        #     self.redis_client.set(self.games_key, json.dumps(games, default=str))
 
     @property
     def games (self) -> dict[str, ChessGame]:
         return {
             name: ChessGame(**game)
-            for name, game in json.loads(self.redis_client.get(self.games_key)).items()
+            for name, game in json.loads(self.redis_client.get(self.games_key, "{}")).items()
         }
 
     def get_games (self) -> list[str]:

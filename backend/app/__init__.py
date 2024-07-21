@@ -53,12 +53,12 @@ def create_app() -> Flask:
     cors.init_app(app)
 
     # Create chess games
-    chess_games.add_game("Daily", SECONDS_IN_DAY, next_update=(SECONDS_IN_DAY//2))
+    chess_games.add_game("Daily", SECONDS_IN_DAY)
     # chess_games.add_game("6 Hours", SECONDS_IN_HOUR * 6)
 
     scheduler.add_job(
         chess_games.verify_games_to_update, "interval",
-        seconds=chess_games.shorter_update_time
+        seconds=SECONDS_IN_HOUR
     )
 
     scheduler.start()

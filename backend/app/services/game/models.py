@@ -40,8 +40,8 @@ class ChessGame:
             self.next_update = int(time.time() * 1000) + ( self.base_update * 1000 )
 
         # Set next move as unix time if next_update
-        elif self.next_update <= int(time.time() * 1000):
-            self.next_update = int(time.time() * 1000) + ( self.next_update * 1000 )
+        # elif self.next_update <= int(time.time() * 1000):
+        #     self.next_update = int(time.time() * 1000) + ( self.next_update * 1000 )
 
     def to_insert (self):
         # Remove bson support
