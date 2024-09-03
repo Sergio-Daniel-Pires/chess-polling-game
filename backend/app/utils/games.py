@@ -218,7 +218,7 @@ class LocalGameManager (GamesManager):
     def games (self) -> dict[str, ChessGame]:
         return {
             name: ChessGame(**game)
-            for name, game in json.loads(self.redis_client.get(self.games_key, "{}")).items()
+            for name, game in json.loads(self.redis_client.get(self.games_key) or "{}").items()
         }
 
     def get_games (self) -> list[str]:
