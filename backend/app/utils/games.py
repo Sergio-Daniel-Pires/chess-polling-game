@@ -200,9 +200,9 @@ class LocalGameManager (GamesManager):
     mongo_client: pymongo.MongoClient
 
     def __init__ (self, games: dict[str, Any] = None):
-        self.games_key = "games1"
+        self.games_key = "chess:games1"
 
-        self.redis_client = redis.StrictRedis(config.REDIS_CONN)
+        self.redis_client = redis.StrictRedis(config.REDIS_CONN, password=config.REDIS_PASSWORD)
 
         self.mongo_client = pymongo.MongoClient(config.MONGO_CONN)
         self.chess_db = self.mongo_client["chess"]

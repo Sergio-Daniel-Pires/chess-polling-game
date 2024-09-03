@@ -24,6 +24,7 @@ jobs:
           echo "RECAPTCHA_PUBLIC_KEY=${{ secrets.RECAPTCHA_PUBLIC_KEY }}" > backend/app/.env
           echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> backend/app/.env
           echo "REDIS_CONN=${{ secrets.REDIS_CONN }}" >> backend/app/.env
+          echo "REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}" >> backend/app/.env
           echo "MONGO_CONN=${{ secrets.MONGO_CONN }}" >> backend/app/.env
 
           # Update frontend env vars
